@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENTRUCK Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script src="form.js"></script>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">🚛 RENTRUCK</div>
+
+        <nav>
+            <a href="home.html" class="nav-item active">🏠 Dashboard</a>
+            <a href="Tab/customers.html" class="nav-item">👤 Customers</a>
+            <a href="Tab/reservations.html" class="nav-item">📅 Reservations</a>
+            <a href="Tab/missions.html" class="nav-item">🚚 Missions</a>
+            <a href="Tab/drivers.html" class="nav-item">👨‍✈️ Drivers</a>
+            <a href="Tab/vehicles.html" class="nav-item">🚛 Vehicles</a>
+            <a href="Tab/invoices.html" class="nav-item">💳 Invoices</a>
+            <a href="Tab/queries.html" class="nav-item">📊 Queries</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <div class="card card-wide">
+            <h2>Welcome to RENTRUCK 👋</h2>
+            <p class="subtle">Truck rental management dashboard</p>
+        </div>
+
+        <div class="card">
+            <div class="subtle">Active Missions</div>
+            <div class="stat">128</div>
+        </div>
+
+        <div class="card">
+            <div class="subtle">Customers</div>
+            <div class="stat">1,042</div>
+        </div>
+
+        <div class="card">
+            <div class="subtle">Vehicles</div>
+            <div class="stat">63</div>
+        </div>
+
+        <div class="card">
+            <div class="subtle">Pending Invoices</div>
+            <div class="stat">27</div>
+        </div>
+
+        <div class="card card-wide">
+            <h3>Upcoming Missions</h3>
+            <table>
+                <tr><td>Mission #302</td><td>Mar 28</td></tr>
+                <tr><td>Mission #305</td><td>Mar 29</td></tr>
+                <tr><td>Mission #310</td><td>Mar 30</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3>Fleet Usage</h3>
+            <div class="circle">
+                <span>70%</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Quick Actions</h3>
+            <a class="btn btn-primary" onclick="openModal()">+ Add Customer</a><br>
+            <a class="btn btn-primary" onclick="openResModal()">+ Add Reservation</a><br>
+            <a class="btn btn-primary" onclick="openMiModal()">Assign Mission</a>
+        </div>
+
+    </main>
+
+</div>
+<!-- ADD CUSTOMER MODAL -->
+<div id="addCustomerModal" class="modal">
+
+    <div class="modal-content">
+        <h3>Add Customer</h3>
+
+        <input type="text" placeholder="Name / Business Name">
+        <input type="text" placeholder="Address">
+
+        <select>
+            <option>Individual</option>
+            <option>Business</option>
+        </select>
+
+        <div class="modal-actions">
+            <button onclick="closeModal()" class="btn">Cancel</button>
+            <button class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+
+</div>
+<!--THIS is reservation form(popup)!!!!!!!!!!!!!!!-->
+<div id="addResModal" class="modal">
+
+    <div class="modal-content">
+        <h3>Add Reservation</h3>
+
+        <input type="text" placeholder="Name / Business Name">
+        <input type="text" placeholder="License">
+        <input type="text" placeholder="Date">
+
+        <select>
+            <option>Individual</option>
+            <option>Business</option>
+        </select>
+
+        <div class="modal-actions">
+            <button onclick="closeResModal()" class="btn">Cancel</button>
+            <button class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+
+</div>
+<div id="addMiModal" class="modal">
+
+    <div class="modal-content">
+        <h3>Assign Mission</h3>
+
+        <input type="text" placeholder="Mission title">
+        <input type="text" placeholder="License">
+        <input type="text" placeholder="Date">
+
+        <select>
+            <option>Individual</option>
+            <option>Business</option>
+        </select>
+
+        <div class="modal-actions">
+            <button onclick="closeMiModal()" class="btn">Cancel</button>
+            <button class="btn btn-primary">Assign</button>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

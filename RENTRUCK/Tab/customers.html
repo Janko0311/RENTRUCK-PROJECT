@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Customers</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<script src="../form.js"></script>
+<body>
+<div class="dashboard">
+
+<aside class="sidebar">
+<div class="logo">🚛 RENTRUCK</div>
+<nav>
+<a href="../home.html" class="nav-item">🏠 Dashboard</a>
+<a href="customers.html" class="nav-item active">👤 Customers</a>
+<a href="reservations.html" class="nav-item">📅 Reservations</a>
+<a href="missions.html" class="nav-item">🚚 Missions</a>
+<a href="drivers.html" class="nav-item">👨‍✈️ Drivers</a>
+<a href="vehicles.html" class="nav-item">🚛 Vehicles</a>
+<a href="invoices.html" class="nav-item">💳 Invoices</a>
+<a href="queries.html" class="nav-item">📊 Queries</a>
+</nav>
+</aside>
+
+<main class="main-content">
+
+<div class="card card-wide">
+<h2>Customers</h2>
+<a class="btn btn-primary" onclick="openModal()">+ Add Customer</a>
+</div>
+
+
+
+<div class="card card-wide">
+<table>
+<tr><th>ID</th><th>Name</th><th>Type</th><th>Actions</th></tr>
+<tr>
+<td>1</td><td>Failed 353 Company</td><td>Business</td>
+<td>
+<a class="btn btn-sm">Edit</a>
+<a class="btn btn-sm btn-danger">Delete</a>
+</td>
+</tr>
+</table>
+</div>
+
+</main>
+</div>
+
+<!-- ADD CUSTOMER MODAL -->
+<div id="addCustomerModal" class="modal">
+
+    <div class="modal-content">
+        <h3>Add Customer</h3>
+
+        <input type="text" placeholder="Name / Business Name">
+        <input type="text" placeholder="Address">
+
+        <select>
+            <option>Individual</option>
+            <option>Business</option>
+        </select>
+
+        <div class="modal-actions">
+            <button onclick="closeModal()" class="btn">Cancel</button>
+            <button class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
